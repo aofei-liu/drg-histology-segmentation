@@ -12,3 +12,5 @@ py -m cellpose --dir "tif-image-directory" --chan 1 --pretrained_model CP --save
 The masks were cleaned up with "DRG histology segmentation.ipynb" via 3-level otsu thresholding. The 'DRG data analysis.ipynb' notebook can be used to further filter masks by properties such as area, solidity, etc and also for visualization. (Requires [statannot](https://github.com/webermarcolivier/statannot).)
 
 It is theoretically possible to finetune the pretrained cellpose models to achieve better segmentation performance, but since the base CP model worked well enough with additional basic filtering, the time cost for manual annotation was not worth it.
+
+On a tangent: if you're curious how this histology data came to be, you can check out [this lab64 repo](https://github.com/lab64makerspace/LED-based-Gear/tree/master/OptoStim-mice) for the PCB design for the LED contraption we used to blast these mice with.
