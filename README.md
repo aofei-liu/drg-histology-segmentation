@@ -9,6 +9,6 @@ Segmentation was performed on a GPU-enabled system with the command
 py -m cellpose --dir "tif-image-directory" --chan 1 --pretrained_model CP --save_png --verbose --use_gpu --flow_threshold 0 --cellprob_threshold 0
 ```
 
-The masks were cleaned up with "DRG histology segmentation.ipynb" via 3-level otsu thresholding. The 'DRG data analysis.ipynb' notebook can be used to further filter masks by properties such as area, solidity, etc and also for visualization.
+The masks were cleaned up with "DRG histology segmentation.ipynb" via 3-level otsu thresholding. The 'DRG data analysis.ipynb' notebook can be used to further filter masks by properties such as area, solidity, etc and also for visualization. (Requires [statannot](https://github.com/webermarcolivier/statannot).)
 
 It is theoretically possible to finetune the pretrained cellpose models to achieve better segmentation performance, but since the base CP model worked well enough with additional basic filtering, the time cost for manual annotation was not worth it.
